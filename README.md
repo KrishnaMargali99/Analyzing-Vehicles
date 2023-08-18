@@ -19,35 +19,47 @@ Data Preprocessing
 
 ● Features VIN (1-10), DOL Vehicle ID, Vehicle Location, Electric Utility, and 2020 Census Tract have no effect on
 the target variable and are hence dropped.
+
 ● The target variable is continuous and is converted into a categorical variable (‘Electric Range Category’) for
 classification by defining range intervals and assigning a category to each interval.
+
 ● The features Electric Range and Base MSRP are positively skewed with 0.93 and 6.4 respectively.
+
 ● Outlier Detection using Mahalanobis distance criteria is used to remove all the discrepancies in the Electric Range
 feature.
+
 ● Features with importance scores close to zero, including 'Electric Range', 'Electric Range Category', 'City', 'State',
 'County', 'Postal Code', and 'Legislative District' are removed from the list of features for ML models.
+
 ML Methods
+
 ● Classifier: The Decision Tree classifier achieves a significantly higher accuracy score of 98.52% compared to the
 Logistic Regression classifier's accuracy score of 58.86%. The cross-validation scores suggest that the Decision
 Tree classifier is likely to generalize better to new data than the Logistic Regression classifier.
-5
+
 ● Regressor: The Random Forest Regressor achieves a much lower cross-validation MSE of 26.051983 compared
 to the Linear Regressor's cross-validation MSE of 4888.003900.
+
 ● On the other hand, the R-squared score for the Linear Regressor is much lower, suggesting that the independent
 variables do not explain as much of the variance in the dependent variable.
+
 ● Clustering: K-means clustering algorithm is used to group the electric vehicles into 3 clusters based on the
 Electric Range variable as follows - short range, medium range, and long range. The optimal number of clusters is
 found using the Elbow Method.
+
 ● Advance Method: The ensemble model achieves a much lower MSE of 5.07 compared to the Random Forest
 model alone, indicating that the ensemble model is better at predicting the electric range of vehicles than the
 Random Forest model alone
 
 
 Based on these findings, we can suggest the following actionable insights:
+
 ● To incentivize the adoption of EVs, policymakers could consider increasing incentives for vehicles with longer
 ranges, particularly those that are not eligible for the CAFV program.
+
 ● Dealerships and manufacturers can use the clustering results to target marketing efforts and product development
 towards specific segments of the EV market.
+
 ● Machine learning models, particularly the Random Forest Regressor and ensemble model, can be used to predict
 the electric range of new EV models with reasonable accuracy, thereby aiding in the product development
 process.
