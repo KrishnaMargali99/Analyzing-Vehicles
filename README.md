@@ -1,17 +1,22 @@
 Our analysis of the electric vehicle population in Washington, US from 1997 to 2022 has yielded the following
 findings:
+
+
 EDA
 ● The dataset contains records ranging from the year 1997 to 2023, with the majority of the electric vehicles
 manufactured between 2016 and 2022 and having a range between 0 to 250 miles. (Refer Fig. 1 - Appendix A)
 ● Vehicles that are eligible for the CAFV program seem to have a slightly higher range, with a peak around 200 to
 250 miles. The non-CAFV eligible vehicles, on the other hand, are concentrated around the 0 to 100 miles range.
 (Refer Fig. 2 - Appendix A)
+
 ● The majority of battery electric vehicles (BEVs) have an electric range of less than 300 miles, while plug-in
 hybrid electric vehicles (PHEVs) have a wider range distribution with some vehicles having an electric range of
 over 500 miles. (Refer Fig. 3 - Appendix A)
+
 ● EVs with longer ranges tend to be more expensive, and those with higher base MSRP are eligible for CAFV
 incentives. (Refer Fig. 4 - Appendix A)
 Data Preprocessing
+
 ● Features VIN (1-10), DOL Vehicle ID, Vehicle Location, Electric Utility, and 2020 Census Tract have no effect on
 the target variable and are hence dropped.
 ● The target variable is continuous and is converted into a categorical variable (‘Electric Range Category’) for
